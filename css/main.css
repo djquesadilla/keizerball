@@ -9,6 +9,7 @@ body, html {
   text-align: center;
   vertical-align: middle;
   height: 100%;
+  overflow: hidden;
 }
 
 /* center the div */
@@ -106,10 +107,10 @@ body, html {
   height: 100%;
   z-index:99;
 }
-
 #scoreboard {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99;
+  font-family: 'Staatliches', cursive;
 }
