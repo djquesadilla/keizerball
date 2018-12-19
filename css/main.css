@@ -1,0 +1,178 @@
+body, html {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: -webkit-gradient(radial, 50%, 0, 50%, 100, color-stop(0%, #c26649), color-stop(100%, #6b220b));
+  background: -webkit-radial-gradient(center, ellipse cover, #c26649 0%, #6b220b 100%);
+  background: -moz-radial-gradient(center, ellipse cover, #c26649 0%, #6b220b 100%);
+  background: radial-gradient(center, ellipse cover, #c26649 0%, #6b220b 100%);
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
+}
+
+/* center the div */
+.aligned-center {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+/* Pitch */
+.pitch {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 90%;
+  height: 0;
+  margin: 10px auto;
+  padding: 0 0 60% 0;
+  background: green;
+}
+
+/* white paintings */
+.interior, .divisoria,
+.semi1, .semi2,
+.corner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 94%;
+  height: 90%;
+  margin: auto;
+  border: 2px solid #eee;
+}
+
+/* Línea divisoria */
+.divisoria:after, .divisoria:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 0;
+  height: 100%;
+  margin-left: .5px;
+  border: 1px solid #eee;  
+}
+/* Circulo central */
+.divisoria:before {
+  top: 50%;
+  width: 16%;
+  height: 0;
+  margin: -8% 0 0 -8%;
+  margin-top: calc(-8% - 4px);
+  margin-left: calc(-8% - .5px);
+  padding-bottom: 16%;
+  border-radius: 50%;
+  border: 2px solid #eee;
+}
+/* Porterias */
+.campo:before, .campo:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  margin: -8% 0 0 -2px;
+  display: block;
+  width: 6%;
+  height: 24%;
+  border: 2px solid #eee;
+  z-index: 2;
+}
+/* Porteria derecha */
+.campo:after {
+  left: auto;
+  right: 3%;
+  margin-right: -2px;
+}
+/* Area penalty */
+.interior:before, .interior:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: -16% 0 0 -2px;
+  display: block;
+  width: 16%;
+  height: 50%;
+  background: green;
+  border: 2px solid #eee;
+}
+/* Area penalty derecha*/
+.interior:after {
+  left: auto;
+  right: 0;
+  margin: -16% -2px 0 0;
+}
+/* Punto penalty */
+.semi1:before, .semi2:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  display: block;
+  width: 1%;
+  height: 1.5%;
+  margin: -.75% 0 0 0;
+  background: #eee;
+  border-radius: 50%;
+  z-index: 2;
+}
+.semi2:before {
+  left: auto;
+  right: 12%;
+}
+/* Semicirculos porterias */
+.semi1:after, .semi2:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 16%;
+  height: 0;
+  margin: -8% 0 0 0;
+  padding-bottom: 16%;
+  border: 2px solid #eee;
+  border-radius: 50%;
+}
+.semi2:after {
+  left: auto;
+  right: 5%;
+}
+.corner {
+  overflow: hidden;
+}
+.corner1:before, .corner2:before,
+.corner1:after, .corner2:after {
+ content: "";
+  position: absolute;
+  top: -6%;
+  left: -4%;
+  width: 6%;
+  height: 0;
+  margin: 0 0 0 0;
+  padding-bottom: 6%;
+  border: 2px solid #eee;
+  border-radius: 50%;
+}
+.corner1:after {
+  left: auto;
+  right: -4%;
+}
+.corner2:before {
+  top: auto;
+  bottom: -6%;
+}
+.corner2:after {
+  top: auto;
+  bottom: -6%;
+  left: auto;
+  right: -4%;
+}
