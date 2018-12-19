@@ -29,16 +29,14 @@ body, html {
   display: inline-block;
   vertical-align: middle;
   width: 90%;
-  height: 0;
+  height: 100%;
   margin: 10px auto;
   padding: 0 0 60% 0;
   background: green;
 }
 
 /* white paintings */
-.interior, .divisoria,
-.semi1, .semi2,
-.corner {
+.interior{
   position: absolute;
   top: 0;
   bottom: 0;
@@ -50,67 +48,20 @@ body, html {
   border: 2px solid #eee;
 }
 
-/* Línea divisoria */
-.divisoria:after, .divisoria:before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  display: block;
-  width: 0;
-  height: 100%;
-  margin-left: .5px;
-  border: 1px solid #eee;  
-}
-/* Circulo central */
-.divisoria:before {
-  top: 50%;
-  width: 16%;
-  height: 0;
-  margin: -8% 0 0 -8%;
-  margin-top: calc(-8% - 4px);
-  margin-left: calc(-8% - .5px);
-  padding-bottom: 16%;
-  border-radius: 50%;
-  border: 2px solid #eee;
-}
-/* Porterias */
-.campo:before, .campo:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 3%;
-  margin: -8% 0 0 -2px;
-  display: block;
-  width: 6%;
-  height: 24%;
-  border: 2px solid #eee;
-  z-index: 2;
-}
-/* Porteria derecha */
-.campo:after {
-  left: auto;
-  right: 3%;
-  margin-right: -2px;
-}
 /* Area penalty */
-.interior:before, .interior:after {
+.interior:before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 0;
-  margin: -16% 0 0 -2px;
+  top: 0;
+  left: 20%;
+  margin: 0 0 0 0;
   display: block;
-  width: 16%;
-  height: 50%;
+  width: 60%;
+  height: 20%;
   background: green;
   border: 2px solid #eee;
 }
-/* Area penalty derecha*/
-.interior:after {
-  left: auto;
-  right: 0;
-  margin: -16% -2px 0 0;
-}
+
 /* Punto penalty */
 .semi1:before, .semi2:before {
   content: "";
@@ -145,34 +96,4 @@ body, html {
 .semi2:after {
   left: auto;
   right: 5%;
-}
-.corner {
-  overflow: hidden;
-}
-.corner1:before, .corner2:before,
-.corner1:after, .corner2:after {
- content: "";
-  position: absolute;
-  top: -6%;
-  left: -4%;
-  width: 6%;
-  height: 0;
-  margin: 0 0 0 0;
-  padding-bottom: 6%;
-  border: 2px solid #eee;
-  border-radius: 50%;
-}
-.corner1:after {
-  left: auto;
-  right: -4%;
-}
-.corner2:before {
-  top: auto;
-  bottom: -6%;
-}
-.corner2:after {
-  top: auto;
-  bottom: -6%;
-  left: auto;
-  right: -4%;
 }
