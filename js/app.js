@@ -6,5 +6,6 @@ $( function() {
       $(this).animate({ top: "+=100%" }, 0);
     });
     score += 1;
+    $("#scoreboard .keizerscore").text(score);
   })
 });
