@@ -1,16 +1,16 @@
-var keizerscore = 0;
-var awayscore = 0;
+let awayScore = 0;
+let keizerScore = 0;
 
 $( function() {
   $("#keizerball").click( function() {
     $(this).animate({ top: "-=100%" }, 400, function() {
       $(this).animate({ top: "+=100%" }, 0);
     });
-    keizerscore += 1;
-    $("#scoreboard .keizerscore").text(keizerscore);
-    if (keizerscore % 3 == 0) {
-      awayscore += 1;
-      $("#scoreboard .awayscore").text(awayscore);
+    keizerScore++;
+    $("#scoreboard .keizerscore").text(keizerScore);
+    if (keizerScore >= 3 && Math.ceil(Math.random() * (keizerScore * 2)) > Math.ceil(keizerScore/2)) {
+      awayScore++;
+      $("#scoreboard .awayscore").text(awayScore);
     }
-  })
+  });
 });
