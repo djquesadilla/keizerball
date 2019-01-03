@@ -8,7 +8,7 @@ $( function() {
     });
     keizerScore++;
     $("#scoreboard .keizerscore").text(keizerScore);
-    if (keizerScore >= 3 && Math.ceil(Math.random() * keizerScore) > Math.ceil(keizerScore/2)) {
+    if (keizerScore >= 3 && Math.ceil(Math.random() * (keizerScore * 2)) > Math.ceil(keizerScore/2)) {
       awayScore++;
       $("#scoreboard .awayscore").text(awayScore);
     }
